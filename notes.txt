@@ -1,0 +1,22 @@
+
+
+-----------To push a new project from a local disk
+1. Go into your GitHub account and create a new repository (green button at the right side). Don't initialize the repository, follow the instructions on the next step to import an existing repository, the one you just created.
+Example
+1 git remote add origin https://github.com/guillermoacdc/lab1.git
+2 git branch -M main
+3 git push -u origin main
+
+The line 2 requires a rename of branch from master to main: git branch -m master main
+If after the git status command there is an ouput like
+(*) HEAD detached at 4c012fa
+nothing to commit, working tree clean
+
+Then you need to type: git checkout master. The (*) output must disappear
+
+-------------to include the build folder in your project and ignore when pushing
+1. copy or create the build directory
+2. creat a .gitignore file with the content: build/
+3. add the .gitignore file to git: git add... 
+4. commit the project
+5. push the project
